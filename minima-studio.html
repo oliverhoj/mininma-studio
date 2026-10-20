@@ -95,21 +95,20 @@ footer{border-top:0;grid-template-columns:1fr 1fr}
 .product-detail-page .product-links{order:3;margin-top:12px}
 }
 
-/* Mobile homepage: a swipeable gallery with full-size images. */
+/* Mobile homepage: a continuous carousel with full-size images. */
 @media(max-width:600px){
   .campaign{padding:12px 0 32px;min-height:0}
-  .campaign-image{overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:18px;overscroll-behavior-x:contain;scrollbar-width:none}
-  .campaign-image::-webkit-scrollbar{display:none}
-  .hero-track{width:100%;animation:none;will-change:auto}
-  .hero-group{flex:0 0 100%;gap:10px;padding:0 18px}
-  .hero-group[aria-hidden="true"]{display:none}
-  .campaign-image img{flex:0 0 86%;width:86%;height:auto;aspect-ratio:3/4;scroll-snap-align:start;scroll-snap-stop:always}
-  .hero-group::after{content:"";flex:0 0 8px}
+  .campaign-image{overflow:hidden}
+  .hero-track{width:max-content;animation:hero-scroll 24s linear infinite;will-change:transform}
+  .hero-group{flex:0 0 auto;width:calc(258vw + 30px);gap:10px;padding-right:10px}
+  .campaign-image img{flex:0 0 86vw;width:86vw;height:auto;aspect-ratio:3/4}
   header button{min-width:44px;min-height:44px;display:inline-flex;align-items:center}
   .header-right button{justify-content:flex-end}
   footer{gap:24px 18px;padding-top:24px}
   .footer-bottom{gap:16px;flex-wrap:wrap;line-height:1.5}
 }
+
+@media(max-width:600px) and (prefers-reduced-motion:reduce){.hero-track{animation:none;will-change:auto}}
 </style></head>
 <body>
 <header><div class="header-left"><button data-panel="menu" aria-expanded="false">menu</button></div><a class="logo" href="minima-studio.html">minima studio</a><div class="header-right"><button data-panel="cart" aria-label="cart (0)">(<span id="count" aria-live="polite">0</span>)</button></div></header>
