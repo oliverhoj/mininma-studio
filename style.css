@@ -98,7 +98,7 @@ footer{border-top:0;grid-template-columns:1fr 1fr}
   .campaign{padding:12px 0 32px;min-height:0}
   .campaign-image{overflow:hidden}
   .hero-track{width:max-content;animation:hero-scroll 24s linear infinite;will-change:transform}
-  .hero-group{flex:0 0 auto;width:calc(258vw + 30px);gap:10px;padding-right:10px}
+  .hero-group{flex:0 0 auto;width:258vw;gap:0;padding:0}
   .campaign-image img{flex:0 0 86vw;width:86vw;height:auto;aspect-ratio:3/4}
   header button{min-width:44px;min-height:44px;display:inline-flex;align-items:center}
   .header-right button{justify-content:flex-end}
